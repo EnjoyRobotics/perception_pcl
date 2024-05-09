@@ -124,11 +124,10 @@ pcl_ros::FrustumCulling::config_callback(const std::vector<rclcpp::Parameter> & 
     if (param.get_name() == "far_plane_distance") {
       impl_.setFarPlaneDistance(param.as_double());
     }
-
-    rcl_interfaces::msg::SetParametersResult result;
-    result.successful = true;
-    return result;
   }
+  rcl_interfaces::msg::SetParametersResult result;
+  result.successful = true;
+  return result;
 }
 
 #include "rclcpp_components/register_node_macro.hpp"
