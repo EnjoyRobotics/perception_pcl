@@ -92,6 +92,7 @@ add_library(pcl_ros_filters SHARED
   src/pcl_ros/filters/statistical_outlier_removal.cpp
   src/pcl_ros/filters/voxel_grid.cpp
   src/pcl_ros/filters/crop_box.cpp
+  src/pcl_ros/filters/frustum_culling.cpp
 )
 target_link_libraries(pcl_ros_filters pcl_ros_tf ${PCL_LIBRARIES})
 ament_target_dependencies(pcl_ros_filters ${dependencies})
@@ -118,6 +119,10 @@ rclcpp_components_register_node(pcl_ros_filters
 rclcpp_components_register_node(pcl_ros_filters
   PLUGIN "pcl_ros::CropBox"
   EXECUTABLE filter_crop_box_node
+)
+rclcpp_components_register_node(pcl_ros_filters
+  PLUGIN "pcl_ros::FrustumCulling"
+  EXECUTABLE filter_frustum_culling_node
 )
 rclcpp_components_register_node(pcl_ros_filters
   PLUGIN "pcl_ros::VoxelGrid"

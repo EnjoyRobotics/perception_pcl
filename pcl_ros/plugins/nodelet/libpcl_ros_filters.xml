@@ -40,4 +40,10 @@
       CropBox is a filter that allows the user to filter all the data inside of a given box.
     </description>
   </class>
+
+  <class name="pcl/FrustumCulling" type="FrustumCulling" base_class_type="nodelet::Nodelet">
+    <description>
+      FrustumCulling is a filter that allows the user to filter all the data inside of a given frustum.
+    </description>
+  </class>
 </library>
